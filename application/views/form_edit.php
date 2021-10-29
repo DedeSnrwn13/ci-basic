@@ -4,28 +4,28 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Form Add</title>
+	<title>Form Edit</title>
 </head>
 <body>
-	<h1>Tambah Artikel</h1>
+	<h1>Edit Artikel</h1>
 
 	<form method="POST">
 		<div>
 			<label for="">Judul</label>
-			<input type="text" name="title">
+			<input type="text" name="title" value="<?php echo $blog['title']; ?>">
 		</div>
 		<br>
 		<div>
 			<label for="">URL</label>
-			<input type="text" name="url">
+			<input type="text" name="url" value="<?php echo $blog['url']; ?>">
 		</div>
 		<br>
 		<div>
 			<label for="">Konten</label>
-			<textarea name="content" id="" cols="30" rows="10"></textarea>
+			&lt;<textarea name="content" id="" cols="30" rows="10">&gt;&lt;<?php echo $blog['content']; ?>&gt;&lt;</textarea>&gt;
 		</div>
 		<br><br>
-		<button type="submit">Simpan Artikel</button>
+		<button type="submit">Update Artikel</button>
 	</form>
 </body>
 </html>

@@ -16,6 +16,7 @@
 					<?php echo $blog['title']; ?>
 				</a>
 			</h2>
+			<a href="<?php echo site_url('blog/edit/'.$blog['id']);?>"> Edit</a>
 			<p><?php echo $blog['content']; ?></p>
 		</div>
 	<?php endforeach; ?>
