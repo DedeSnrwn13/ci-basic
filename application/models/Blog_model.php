@@ -4,6 +4,9 @@ class Blog_model extends CI_Model
 {
 	public function getBlogs()
 	{
+		$filter = $this->input->get('find');
+		$this->db->like('title', $filter);
+
 		return $this->db->get("blog");
 	}
 
