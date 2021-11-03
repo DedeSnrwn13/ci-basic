@@ -39,6 +39,7 @@ class Blog extends CI_Controller
 
 			if ($id) {
 				echo "Data Berhasil Disimpan";
+				redirect('/');
 			} else {
 				echo "Data Gagal Disimpan";
 			}
@@ -62,6 +63,7 @@ class Blog extends CI_Controller
 
 			if ($id) {
 				echo "Data Berhasil Diupdate";
+				redirect('/');
 			} else {
 				echo "Data Gagal Diupdate";
 			}

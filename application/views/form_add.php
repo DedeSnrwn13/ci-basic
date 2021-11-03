@@ -1,31 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Form Add</title>
-</head>
-<body>
-	<h1>Tambah Artikel</h1>
+<?php $this->load->view('partials/header') ?>
 
-	<form method="POST">
-		<div>
-			<label for="">Judul</label>
-			<input type="text" name="title">
+<!-- Page Header-->
+<header class="masthead" style="background-image: url('<?php echo base_url(); ?>assets/img/post-bg.jpg')">
+	<div class="container position-relative px-4 px-lg-5">
+		<div class="row gx-4 gx-lg-5 justify-content-center">
+			<div class="col-md-10 col-lg-8 col-xl-7">
+				<div class="post-heading">
+					<h1>Buat Artikel Baru</h1>
+				</div>
+			</div>
 		</div>
-		<br>
-		<div>
-			<label for="">URL</label>
-			<input type="text" name="url">
+	</div>
+</header>
+	
+<div class="container">
+	<div class="row justify-content-center">
+		<div class="col-md-7">
+			<h1>Tambah Artikel</h1>
+			
+			<form method="POST">
+				<div class="mb-3">
+					<label for="" class="form-label">Judul</label>
+					<input type="text" name="title" class="form-control">
+				</div>				
+				<div class="mb-3">
+					<label for="" class="form-label">URL</label>
+					<input type="text" name="url" class="form-control">
+				</div>
+				<div class="mb-3">
+					<label for="" class="form-label">Konten</label>
+					<textarea name="content" id="" cols="30" rows="10" class="form-control"></textarea>
+				</div>
+				<button type="submit" class="btn btn-primary mb-5">Simpan Artikel</button>
+			</form>
 		</div>
-		<br>
-		<div>
-			<label for="">Konten</label>
-			<textarea name="content" id="" cols="30" rows="10"></textarea>
-		</div>
-		<br><br>
-		<button type="submit">Simpan Artikel</button>
-	</form>
-</body>
-</html>
+	</div>
+</div>
+
+<?php $this->load->view('partials/footer'); ?>

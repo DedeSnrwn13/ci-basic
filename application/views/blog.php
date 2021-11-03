@@ -34,8 +34,8 @@
 						<a href="#!">Dede Sunarwan</a>
 						on <?php echo date('d M Y', strtotime($blog['date'])); ?>
 
-						<a href="<?php echo site_url('blog/edit/'.$blog['id']);?>"> Edit</a>
-						<a href="<?php echo site_url('blog/delete/'.$blog['id']);?>"> Delete</a>
+						<a href="<?php echo site_url('blog/edit/'.$blog['id']);?>" class="btn btn-sm btn-info"><i class="fas fa-pencil-alt"></i> Edit</a>
+						<a href="<?php echo site_url('blog/delete/'.$blog['id']);?>" class="btn btn-sm btn-danger"><i class="fas fa-trash-alt"></i> Delete</a>
 					</p>
 				</div>                 
 				<!-- Divider-->
