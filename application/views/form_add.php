@@ -18,21 +18,21 @@
 		<div class="col-md-7">
 			<h1>Tambah Artikel</h1>
 			
-			<form method="POST">
+			<?php echo form_open(); ?>
 				<div class="mb-3">
 					<label for="" class="form-label">Judul</label>
-					<input type="text" name="title" class="form-control">
+					<?php echo form_input('title', null, 'class="form-control"'); ?>
 				</div>				
 				<div class="mb-3">
 					<label for="" class="form-label">URL</label>
-					<input type="text" name="url" class="form-control">
+					<?php echo form_input('url', null, 'class="form-control"'); ?>
 				</div>
 				<div class="mb-3">
 					<label for="" class="form-label">Konten</label>
-					<textarea name="content" id="" cols="30" rows="10" class="form-control"></textarea>
+					<?php echo form_textarea('content', null, 'class="form-control"'); ?>
 				</div>
 				<button type="submit" class="btn btn-primary mb-5">Simpan Artikel</button>
-			</form>
+			<?php echo form_close(); ?>
 		</div>
 	</div>
 </div>
