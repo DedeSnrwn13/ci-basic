@@ -81,21 +81,17 @@ class Blog extends CI_Controller
 			$config['max_height'] = 1600;
 
 			$this->load->library('upload', $config);
+			$this->upload->do_upload('cover');
 			
-			if (!$this->upload->do_upload('cover'))
+			if (!empty($this->upload->data()['file_name']))
 			{
-				echo $this->upload->display_errors();
-			}
-			else
-			{
-				$dataEdit['cover'] = $this->upload->data('file_name');
+				$dataEdit['cover'] = $this->upload->data()['file_name'];
 			}
 
 			$id = $this->Blog_model->updateBlog($id, $dataEdit);
 
 			if ($id) {
 				echo "Data Berhasil Diupdate";
-				redirect('/');
 			} else {
 				echo "Data Gagal Diupdate";
 			}
