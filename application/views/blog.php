@@ -22,6 +22,7 @@
 				<input class="form-control me-2" type="search" name="find" placeholder="Search" aria-label="Search">
 				<button class="btn btn-success" type="submit">Search</button>
 			</form>
+
 			<?php foreach ($blogs as $key => $blog): ?>
 				<!-- Post preview-->
 				<div class="post-preview">

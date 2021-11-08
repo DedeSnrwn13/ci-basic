@@ -27,7 +27,12 @@ class Blog extends CI_Controller
 
 	public function add()
 	{
-		if ($this->input->post()) {
+		$this->form_validation->set_rules('title', 'Judul', 'required|min_length[5]');
+		$this->form_validation->set_rules('url', 'URL', 'required|alpha_dash');
+		$this->form_validation->set_rules('content', 'Konten', 'required|min_length[15]');
+
+		if ($this->form_validation->run() == TRUE)  
+		{
 			$data['title'] = $this->input->post('title');
 			$data['content'] = $this->input->post('content');
 			$data['url'] = $this->input->post('url');
@@ -68,7 +73,11 @@ class Blog extends CI_Controller
 		$query = $this->Blog_model->getSingleBlog('id', $id);
 		$data['blog'] = $query->row_array();
 
-		if ($this->input->post()) {
+		$this->form_validation->set_rules('title', 'Judul', 'required');
+		$this->form_validation->set_rules('url', 'URL', 'required|alpha_dash');
+		$this->form_validation->set_rules('content', 'Konten', 'required');
+
+		if ($this->form_validation->run() == TRUE) {
 			$dataEdit['title'] = $this->input->post('title');
 			$dataEdit['content'] = $this->input->post('content');
 			$dataEdit['url'] = $this->input->post('url');

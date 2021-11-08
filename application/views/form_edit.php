@@ -23,23 +23,25 @@
 <div class="container">
 	<div class="row justify-content-center">
 		<div class="col-md-7">
-			<h1>Edit Artikel</h1>
+			<div class="alert alert-warning">
+				<?php echo validation_errors(); ?>
+			</div>
 		
 			<?php echo form_open_multipart(); ?>
 				<div class="mb-3">
-					<label for="" class="form-label">Judul</label>
+					<label for="">Judul</label>
 					<?php echo form_input('title', $blog['title'], 'class="form-control"'); ?>
 				</div>
 				<div class="mb-3">
-					<label for="" class="form-label">URL</label>
+					<label for="">URL</label>
 					<?php echo form_input('url', $blog['url'], 'class="form-control"'); ?>
 				</div>
 				<div class="mb-3">
-					<label for="" class="form-label">Konten</label>
+					<label for="">Konten</label>
 					<?php echo form_textarea('content', $blog['content'], 'class="form-control"'); ?>
 				</div>
 				<div class="mb-3">
-					<label for="" class="form-label">Cover</label>
+					<label for="">Cover</label>
 					<?php echo form_upload('cover', null, 'class="form-control"'); ?>
 				</div>
 
