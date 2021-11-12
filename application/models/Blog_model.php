@@ -9,7 +9,7 @@ class Blog_model extends CI_Model
 		$this->db->limit($limit, $offset);
 		$this->db->order_by('date', 'desc');
 
-		return $this->db->get("blog");
+		return $this->db->get('blog');
 	}
 
 	public function getTotalBlogs()
