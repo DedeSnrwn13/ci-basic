@@ -42,8 +42,11 @@
 				<!-- Divider-->
 				<hr class="my-4" />
 			<?php endforeach; ?>
+			
 			<!-- Pager-->
-			<div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div>
+			<?php echo $this->pagination->create_links(); ?>
+				
+			</div>
 		</div>
 	</div>
 </div>
