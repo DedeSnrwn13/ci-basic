@@ -36,8 +36,10 @@
 						<a href="#!">Dede Sunarwan</a>
 						on <?php echo date('d M Y', strtotime($blog['date'])); ?>
 
-						<a href="<?php echo site_url('blog/edit/'.$blog['id']);?>" class="btn btn-sm btn-info"><i class="fas fa-pencil-alt"></i> Edit</a>
-						<a href="<?php echo site_url('blog/delete/'.$blog['id']);?>" class="btn btn-sm btn-danger" onclick="return confirm('Yakin Ingin Menghapus Post Ini?')"><i class="fas fa-trash-alt"></i> Delete</a>
+						<?php if (isset($_SESSION['username'])): ?>
+							<a href="<?php echo site_url('blog/edit/'.$blog['id']);?>" class="btn btn-sm btn-info"><i class="fas fa-pencil-alt"></i> Edit</a>
+							<a href="<?php echo site_url('blog/delete/'.$blog['id']);?>" class="btn btn-sm btn-danger" onclick="return confirm('Yakin Ingin Menghapus Post Ini?')"><i class="fas fa-trash-alt"></i> Delete</a>
+						<?php endif; ?>
 					</p>
 				</div>                 
 				<!-- Divider-->
